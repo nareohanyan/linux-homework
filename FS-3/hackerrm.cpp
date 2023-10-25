@@ -24,6 +24,7 @@ int main(int arg, char** argc) {
     int buffer_size = 25;
     char* buffer = new char[buffer_size];
     for(int i = 0; i < buffer_size; ++i) {
+        buffer[i] = '\0';
     }
     
     int return_value = unlink(path);
