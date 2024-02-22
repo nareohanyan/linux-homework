@@ -28,7 +28,7 @@ void do_command(char** argv) {
         time_t end = time(nullptr);
         double duration = difftime(end, beginning);
 
-        std::cout << "Command completed with " << WEXITSTATUS(status) << " exit code" << " and took " << duration << " seconds" << std::endl;
+        std::cout << "Command completed with" << " " << WEXITSTATUS(status) << " exit code" << " and took " << duration << " seconds" << std::endl;
     }
 }
 
