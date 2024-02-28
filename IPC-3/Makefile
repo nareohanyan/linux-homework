@@ -1,17 +1,19 @@
-all: shared_array
-
-shared_array: first.o second.o shared_array.o
+first: first.o shared_array.o
+	g++ first.o shared_array.o -o first
 
 first.o: first.cpp
-	g++ -c first.cpp
+	g++ first.cpp -c -o first.o
+
+second: second.o shared_array.o
+	g++ -c second.o shared_array.o -o second
 
 second.o: second.cpp
-	g++ -c second.cpp
+	g++ -c second.cpp -c -o second.o
 
 shared_array.o: shared_array.cpp
-	g++ -c shared_array.o
+	g++ shared_array.cpp -c -o shared_array.o
 
 clean:
-	rm *.o all
+	rm *.o first second
 
 	
